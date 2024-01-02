@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %} Блог {% endblock %}
+
+{% block body %}
+  
+ <body class ="black-background"> 
+  <nav class='center'>
+    <a href="/" class="button">Главная</a>
+    <a href="/blog" class="button">Интересное</a>
+    <a href="/contacts" class="button">О себе</a>
+  </nav>
+<!-- Думаю, тут ему самое место -->
+{% for post in posts %}
+<div  class='container my-5'> 
+  <div class='row'> 
+    
+    <div class= 'col-lg-6'>
+      <img src= {{ post.image|safe }}>
+    </div>
+    <div class = 'col-lg-6'>
+      <h1 class='text-center'>{{ post.title }}</h1>
+      <h4 class='border2 text-center my-5'>{{ post.content|safe }}</h4>
+    </div>
+  </div>
+</div>
+{% endfor %} 
+ <!--♥♥♥♥♥-->
+  <footer class="py-5 footer">
+  <p>Все права защищены ©</p>
+    <div class="end_links">
+            <a href="https://www.youtube.com/channel/UCHAt7X1nirwRBpsNH0p7KLA"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" height="100" width="100" alt="youtube"></a>
+      <a href="https://discord.gg/gAar2bh67t"><img src="/static/image/discord.png" height="100" width="100" alt="youtube"></a>
+    </div>
+  </footer>
+</body>
+</html>
+ 
+{% endblock %}

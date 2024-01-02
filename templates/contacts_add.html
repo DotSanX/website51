@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block title %} GIGACHAD ADDER {% endblock %}
+{% block body %}
+<body class="contacts">
+<div class="container contacts-nav col-12" style="border-bottom: 1px solid #e64444;
+   box-shadow: 1px 1px 2px #e64444, 0 0 1em #e64444, 0 0 0.2em #e64444;}">
+    <nav style="margin-top: 10px;">
+        <a href="/" class="contacts-add-navbuttom">Главная</a>
+        <a href="/blog" class="contacts-add-navbuttom">Интересное</a>
+        <a href="/contacts" class="contacts-add-navbuttom">О себе</a>
+        <a class="contacts-add-navbuttom dropdown-toggle" style="border-radius:20px;" data-bs-toggle="dropdown" aria-expanded="false"></a>
+        <ul class="dropdown-menu" style="background-color: #262626; text-align:center;">
+          <li><a class="contacts-add-navbuttom" href="/contacts/add" style="padding-left: 35px; padding-right: 35px;">Создать карточку</a></li>  
+          <li style="padding-top: 13px;"><a class="contacts-navbuttom" href="/contacts/edit">Редактировать карточку</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="container rounded-5" style="background-color: #262626; color: white;">
+    <div class="container">
+      <div class="contacts_form_head" >
+        <h1><b>Создание карточки гига-программиста</b></h1>
+      </div>
+      <div class="contacts-maintext">
+      <p>
+        Ну так вооооот... эта вот тема уже <b>РАБОТАЕТ</b>, но я ещё не запилил возможность редачить(((
+      </p>
+      </div>
+    <form action="" method="POST"  style="padding-top: 20px;">
+    <div class="container" style="border: 3px solid #e64444 ; border-radius: 50px;">
+      <div class="row contacts_form">
+        <div class="contacts_forms_text col-lg-6 col-md-12 col-sm-12 col-12">
+          <p><label>
+              <input class="contacts_forms" maxlength="12" type="text" name="name" value="{{ name }}" size="30">
+              Ваше имя</label>
+          </p>
+          <p><label>
+              <input class="contacts_forms" type="text" name="image" value="{{ image }}" size="30">
+              url картинки</label>
+          </p>
+          <p><label>
+              <input class="contacts_forms" maxlength="7" type="text" name="color" value="{{ color }}" size="30">
+              Цвет рамочки (HEX формат)</label>
+          </p>
+          <p>
+            <textarea maxlength="315" class="contacts_forms" name="description" value="{{ description }}" id="story" cols="40" rows="8"></textarea>
+            <label for="story">Описание карточки</label>
+          </p>
+          <div class="container contacts-maintext">
+            <p>
+              А теперь ваши ссылки)))
+            </p>
+          </div>
+          <div class=container style="padding-bottom: 15px;">
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms" type="text" name="url_youtube" value="{{ url_youtube }}" size="30">
+                <input class="contacts_forms" type="checkbox" name="check_youtube" checked >
+                Youtube
+                </label>
+              </div>
+            </p>
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms" type="text" name="url_telegram" value="{{ url_telegram }}" size="30">
+                <input class="contacts_forms" type="checkbox" name="check_telegram" checked >
+                Telegram
+                </label>
+              </div>
+            </p>
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms" type="text" name="url_vk" value="{{ url_vk }}" size="30">
+                <input class="contacts_forms" type="checkbox" name="check_vk" checked >
+                VK
+                </label>
+              </div>
+            </p>
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms" type="text" name="url_instagram" value = "{{ url_instagram }}" size="30">
+                <input class="contacts_forms" type="checkbox" name="check_instagram" checked >
+                Instagram
+                </label>
+              </div>
+            </p>
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms" type="text" name="url_discord" value = "{{ url_discord }}" size="30">
+                <input class="contacts_forms" type="checkbox" name="check_discord" checked >
+                Discord
+                </label>
+              </div>
+            </p>
+          </div>
+          <p><label>
+              <input class="contacts_forms" type="text" name="username" value="{{ username }}" size="30">
+              Ваш никнейм (будет виден)))</label>
+          </p>
+          <p><label>
+              <input class="contacts_forms" type="password" name="password" value="{{ password }}" size="30">
+              Пароль для редактирования</label>
+          </p>
+          <div><input class="contacts_forms_button" type="submit" value="Создать чувака"></div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="contacts-maintext"><p>Если вы собираетесь поставить в карточку своё фото, то вы должны быть похожи на этого крутого парня</p></div>
+              <img class="rounded-2" src="/static/image/gigachad.jpg" alt="typical dude" height="400" weight="400">
+        </div>
+      </div>
+    </fieldset>
+    </form>
+</div>
+</div>
+</body>
+{% endblock %}

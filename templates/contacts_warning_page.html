@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %} А ну ка глянь! {% endblock %}
+{% block body %}
+  <body class="contacts">
+<div class="container contacts-nav col-12">
+    <nav style="margin-top: 10px;">
+        <a href="/" class="contacts-navbuttom ">Главная</a>
+        <a href="/blog" class="contacts-navbuttom ">Интересное</a>
+        <a href="/contacts" class="contacts-navbuttom">О себе</a>
+        <a class="contacts-navbuttom dropdown-toggle" style="border-radius:20px;" data-bs-toggle="dropdown" aria-expanded="false"></a>
+        <ul class="dropdown-menu" style="background-color: #262626; text-align:center;">
+          <li><a class="contacts-navbuttom" href="/contacts/add" style="padding-left: 35px; padding-right: 35px;">Создать карточку</a></li>
+          <li style="padding-top: 13px;"><a class="contacts-navbuttom" href="/contacts/edit">Редактировать карточку</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="container rounded-5" style="background-color: #262626; color: white;">
+    <div class="container" >
+      <div class="contacts_form_head" >
+        <h1 style="color: red; padding-top: 55px;"><b>Внимание!</b></h1> <h1><b> {{ warning_type }}</b></h1>
+      </div>
+    </div>
+</div>
+
+</body>
+{% endblock %}

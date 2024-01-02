@@ -1,0 +1,373 @@
+.button {
+    background-color: #edf6ff; /* Цвет фона */
+    
+    color: #1b4268; /* Цвет текста */
+    font: bold 0.8em Arial, Tahoma, sans-serif; /* Параметры шрифта */
+    border: 1px solid #d4dde5; /* Параметры рамки */
+    padding: 20px 20px; /* Расстояние от рамки до текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    text-transform: uppercase; /* Все буквы большие */
+    border-radius:20px; /* Радиус скругления рамки */
+    transition: 0.5s; /* Время перехода */
+
+    
+   }
+   .button:hover {
+    background-color: #18141fFF; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    border-color: #000000; /* Цвет рамки */
+   }
+    .contacts {
+      text-align: center;
+      background-image: url(/static/image/contacts-bg.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      color: white;
+     }
+     .contacts-card {
+      padding-top: 20px;
+     padding-left: 8px;
+     padding-bottom: 20px;
+     }
+     .contacts-img {
+      margin-top: 15px;
+      max-width:100%;
+      height:auto;
+     }
+     .contacts-name {
+     margin-top: 10px;
+     margin-right: 8px;
+     padding-left: 8px;
+     text-align: left;
+     font-family: Andale Mono, monospace;
+     font-size: 35px;
+     color: #fffc2a;
+     }
+     .contacts-maintext {
+     margin-top: 3px;
+     margin-right: 5px;
+     padding-left: 5px;
+     text-align: justify;
+     font-size: 24px;
+     font-family: Courier, monospace;
+     }
+     .contacts-text {
+     margin-top: 3px;
+     padding-left: 8px;
+     text-align: left;
+     font-size: 20px;
+     font-family: Gill Sans, sans-serif;
+     word-break: break-word;
+     }
+     .contacts-links {
+     margin-right: 10px;
+     padding-left: 10px;
+     padding-bottom: 20px;
+     }
+    .contacts-gold {
+    color: #fffc2a;
+    font-family: Impact ;
+    border: 3px solid #fffc2a;
+    padding: 20px 20px;
+    margin-top: 14px ;
+    padding-bottom: 14px;
+    background-image: url(/static/image/contacts-legends-bg.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 500% ;
+    text-shadow: 1px 1px 2px #ffff5e, 0 0 1em #ffff82, 0 0 0.2em #ffff82;
+    box-shadow: 1px 1px 2px #ffff5e, 0 0 1em #ffff82, 0 0 0.2em #ffff82;
+    }
+   .contacts-navbuttom {
+    background-color: #262626; /* Цвет фона СПАСИБО АВТОРУ КОММЕНТАРИЕВ))) */
+    text-align:center;
+    color: white; /* Цвет текста */
+    font: bold 0.8em Helvetica, sans-serif; /* Параметры шрифта */
+    /*border: 1px solid #d4dde5; /* Параметры рамки */
+    padding: 10px 10px; /* Расстояние от рамки до текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    text-transform: uppercase; /* Все буквы большие */
+    /*border-radius: 50px; /* Радиус скругления рамки */
+    transition: 0.5s; /* Время перехода */
+   }
+    .contacts-navbuttom:hover {text-shadow: 1px 1px 2px #ffff2b, 0 0 1em #ffff2b, 0 0 0.2em #ffff2b;
+   box-shadow: 1px 1px 2px #ffff2b, 0 0 1em #ffff2b, 0 0 0.2em #ffff2b;}
+   .contacts-add-navbuttom {
+    background-color: #262626; /* Цвет фона СПАСИБО АВТОРУ КОММЕНТАРИЕВ))) */
+    text-align:center;
+    color: white; /* Цвет текста */
+    font: bold 0.8em Helvetica, sans-serif; /* Параметры шрифта */
+    /*border: 1px solid #d4dde5; /* Параметры рамки */
+    padding: 10px 10px; /* Расстояние от рамки до текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    text-transform: uppercase; /* Все буквы большие */
+    /*border-radius: 50px; /* Радиус скругления рамки */
+    transition: 0.5s; /* Время перехода */
+   }
+    .contacts-add-navbuttom:hover {text-shadow: 1px 1px 2px #e64444, 0 0 1em #e64444, 0 0 0.2em #e64444;
+   box-shadow: 1px 1px 2px #e64444, 0 0 1em #e64444, 0 0 0.2em #e64444;}
+   .contacts-nav {
+   background-color: #262626;
+   height: 50px;
+   position: fixed; left: 50% ; transform: translateX(-50%);
+   }
+   .contacts-edit-navbuttom {
+    background-color: #262626; /* Цвет фона СПАСИБО АВТОРУ КОММЕНТАРИЕВ))) */
+    text-align:center;
+    color: white; /* Цвет текста */
+    font: bold 0.8em Helvetica, sans-serif; /* Параметры шрифта */
+    /*border: 1px solid #d4dde5; /* Параметры рамки */
+    padding: 10px 10px; /* Расстояние от рамки до текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    text-transform: uppercase; /* Все буквы большие */
+    /*border-radius: 50px; /* Радиус скругления рамки */
+    transition: 0.5s; /* Время перехода */
+   }
+    .contacts-edit-navbuttom:hover {text-shadow: 1px 1px 2px #7d32d1, 0 0 1em #7d32d1, 0 0 0.2em #7d32d1;
+   box-shadow: 1px 1px 2px #7d32d1, 0 0 1em#7d32d1, 0 0 0.2em #7d32d1;}
+   .contacts_form_head {
+    font-family: Verdana, sans-serif;
+    padding-bottom: 15px;
+    color: #e64444;
+   }
+   .contacts_form {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+   }
+   .contacts_forms_button {
+    border: 2px solid #e64444;
+    text-transform: uppercase;
+    border-radius:20px; 
+    transition: 0.5s;
+    font: bold 0.8em Helvetica, sans-serif;
+    padding: 10px 10px;
+    background-color: #262626;
+    text-align:center;
+    color: white;
+   }
+    .card_edit {
+    margin-bottom: 15px;
+    background-color: #171717;
+    color: white;
+    border-radius:20px; 
+    margin-top: 10px;
+    margin-right: 3px;
+    padding-left: 3px;
+    font-family: Andale Mono, monospace;
+    font-size: 35px;
+    color: #fffc2a;
+    }
+    .contacts_form_edit {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+   }
+    .card_edit:hover {
+    box-shadow: 1px 1px 2px #7d32d1, 0 0 1em #7d32d1, 0 0 0.2em #7d32d1;
+    background-color: #ffffff;
+    transition: 0.5s;
+    color: #7d32d1;
+   }
+    .contacts_forms_edit:focus {
+    box-shadow: 1px 1px 2px #7d32d1, 0 0 1em #7d32d1, 0 0 0.2em #7d32d1;
+    outline: none;
+   }
+   .contacts_forms_edit_button {
+    border: 2px solid #7d32d1;
+    text-transform: uppercase;
+    border-radius:20px; 
+    transition: 0.5s;
+    font: bold 0.8em Helvetica, sans-serif;
+    padding: 10px 10px;
+    background-color: #262626;
+    text-align:center;
+    color: white;
+   }
+    .contacts_forms_edit_button:hover {
+    box-shadow: 1px 1px 2px #7d32d1, 0 0 1em #7d32d1, 0 0 0.2em #7d32d1;
+    background-color: #ffffff;
+    color: #262626;
+   }
+   .contacts_forms_button:hover {
+    box-shadow: 1px 1px 2px #e64444, 0 0 1em #e64444, 0 0 0.2em #e64444;
+    background-color: #ffffff;
+    color: #262626;
+   }
+   .contacts_forms {
+    border: 2px solid #e64444;
+    resize: none;
+   }
+   .contacts_forms:focus {
+    box-shadow: 1px 1px 2px #e64444, 0 0 1em #e64444, 0 0 0.2em #e64444;
+    outline: none;
+   }
+   .contacts_forms_text {
+     text-align: left;
+    font-family: FreeMono, monospace;
+   }
+   .contacts-futor {
+     background-color: #171717;
+     color: white;
+     text-align: left;
+     border-radius:20px; 
+     
+   }
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+
+.btn-new:hover {
+     background-position: right center;
+}
+/*стили блога*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+  background: black;
+  text-align: center;
+  margin: 100px 0px 0px 0px;
+}
+
+.black-background {
+  color: white;
+  margin: 0;
+
+    background: linear-gradient(-45deg, #3c3a41, #000000, #3c3a41);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.border {
+  border: solid 5px;
+  border-radius: 25% 15%;
+  margin-top:70px;
+}
+
+.border2 {
+  border: solid 5px;
+  border-radius: 30px;
+  padding: 20px;
+}
+.border3 {
+  border: solid 5px;
+  border-radius: 10% 30% 50% 70%;
+}
+.border4{
+  border: solid 5px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 100px;
+    text-transform: uppercase;
+    animation: animate 0.7s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes animate {
+    0% {
+        text-shadow: 4px 4px 0px purple;
+    }
+    25% {
+        text-shadow: -4px -4px 0px blue;
+    }
+    50% {
+        text-shadow: 4px 4px 0px purple;
+    }
+    75% {
+        text-shadow: -4px -4px 0px blue;
+    }
+    100% {
+        text-shadow: 4px 4px 0px purple;
+    }
+}
+
+.text_in_blog1{
+  padding:15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Стили index*/
+
+.index-body{
+  background: linear-gradient(-45deg, #1A1F1A,#232923,#121512,#0E110E, #161916); 
+  animation: gradient 20s ease infinite;
+  color: #8EA641;
+  text-align: center;
+}
+
+.button-KAKT{
+    background-color: #354E35
+ ; /* Цвет фона */
+    text-align:center;
+    color: olive ; /* Цвет текста */
+    font: bold 0.8em Arial, Tahoma, sans-serif; /* Параметры шрифта */
+    border: 1px solid yellowgreen ; /* Параметры рамки */
+    padding: 20px 20px; /* Расстояние от рамки до текста */
+    text-decoration: none; /* Убираем подчёркивание */
+  
+    text-transform: uppercase; /* Все буквы большие */
+    border-radius: 20px; /* Радиус скругления рамки */
+    transition: 0.5s; /* Время перехода */
+   }
+
+.button-KAKT:hover {
+    background-color: green ; /* Цвет фона */
+    color: olive; /* Цвет текста */
+    border-color: yellowgreen ; /* Цвет рамки */
+   }
+
+
+.center{
+  text-align:center;
+  margin-top:30px;
+}
+  

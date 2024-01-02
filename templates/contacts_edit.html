@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block title %} GIGACHAD EDITOR {% endblock %}
+{% block body %}
+<body class="contacts">
+<div class="container contacts-nav col-12" style="border-bottom: 1px solid #7d32d1;
+   box-shadow: 1px 1px 2px #7d32d1, 0 0 1em #7d32d1, 0 0 0.2em #7d32d1;}">
+    <nav style="margin-top: 10px;">
+        <a href="/" class="contacts-edit-navbuttom">Главная</a>
+        <a href="/blog" class="contacts-edit-navbuttom">Интересное</a>
+        <a href="/contacts" class="contacts-edit-navbuttom">О себе</a>
+        <a class="contacts-edit-navbuttom dropdown-toggle" style="border-radius:20px;" data-bs-toggle="dropdown" aria-expanded="false"></a>
+        <ul class="dropdown-menu" style="background-color: #262626; text-align:center;">
+          <li><a class="contacts-edit-navbuttom" href="/contacts/add" style="padding-left: 35px; padding-right: 35px;">Создать карточку</a></li>  
+          <li style="padding-top: 13px;"><a class="contacts-edit-navbuttom" href="/contacts/edit">Редактировать карточку</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="container rounded-5" style="background-color: #262626; color: white;">
+    <div class="container">
+      <div class="contacts_form_head" >
+        <h1><b>Редактирование</b></h1>
+      </div>
+      <div class="contacts-maintext">
+      <p>
+        Ну так вооооот... эта вот тема ещё <b>НЕ РАБОТАЕТ</b>
+      </p>
+      </div>
+    <form action="" method="POST"  style="padding-top: 20px;">
+    <div class="container" style="border: 3px solid #7d32d1 ; border-radius: 50px;">
+      <div class="row contacts_form">
+        <div class="contacts_forms_text col-lg-6 col-md-12 col-sm-12 col-12">
+          <p><label>
+              <input class="contacts_forms_edit" maxlength="12" type="text" name="name" value="{{ name }}" size="30">
+              Ваше имя</label>
+          </p>
+          <p><label>
+              <input class="contacts_forms_edit" type="text" name="image" value="{{ image }}" size="30">
+              url картинки</label>
+          </p>
+          <p><label>
+              <input class="contacts_forms_edit" maxlength="7" type="text" name="color" value="{{ color }}" size="30">
+              Цвет рамочки (HEX формат)</label>
+          </p>
+          <p>
+            <textarea maxlength="315" class="contacts_forms_edit" name="description" value="{{ description }}" id="story" cols="40" rows="8"></textarea>
+            <label for="story">Описание карточки</label>
+          </p>
+          <div class="container contacts-maintext">
+            <p>
+              А теперь ваши ссылки)))
+            </p>
+          </div>
+          <div class=container style="padding-bottom: 15px;">
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms_edit" type="text" name="url_youtube" value="{{ url_youtube }}" size="30">
+                <input class="contacts_forms_edit" type="checkbox" name="check_youtube" checked >
+                Youtube
+                </label>
+              </div>
+            </p>
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms_edit" type="text" name="url_telegram" value="{{ url_telegram }}" size="30">
+                <input class="contacts_forms_edit" type="checkbox" name="check_telegram" checked >
+                Telegram
+                </label>
+              </div>
+            </p>
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms_edit" type="text" name="url_vk" value="{{ url_vk }}" size="30">
+                <input class="contacts_forms_edit" type="checkbox" name="check_vk" checked >
+                VK
+                </label>
+              </div>
+            </p>
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms_edit" type="text" name="url_instagram" value = "{{ url_instagram }}" size="30">
+                <input class="contacts_forms_edit" type="checkbox" name="check_instagram" checked >
+                Instagram
+                </label>
+              </div>
+            </p>
+            <p>
+              <div class="row">
+                <label>
+                <input class="contacts_forms_edit" type="text" name="url_discord" value = "{{ url_discord }}" size="30">
+                <input class="contacts_forms_edit" type="checkbox" name="check_discord" checked >
+                Discord
+                </label>
+              </div>
+            </p>
+          </div>
+          <p><label>
+              <input class="contacts_forms_edit" type="text" name="username" value="{{ username }}" size="30">
+              Ваш никнейм</label>
+          </p>
+          <p><label>
+              <input class="contacts_forms_edit" type="password" name="password" value="{{ password }}" size="30">
+              Пароль для редактирования</label>
+          </p>
+        <div><input class="contacts_forms_edit_button" type="submit" value="Создать чувака"></div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="contacts-maintext"><h1 style="color: #fffc2a; font-family: Impact ;text-shadow: 1px 1px 2px #ffff5e, 0 0 1em #ffff82, 0 0 0.2em #ffff82; padding-left: 10px;">ГЕРОИ ПРОГРАММИРОВАНИЯ</h1></div>
+            <div class="container">
+              <div class="row">
+                {% for card in contacts %}
+                <a href="/contacts/edit/{{ card.username }}" style="text-decoration: none;
+    text-transform: uppercase; border: 2px solid {{ card.color }};" class="col-5 card_edit">
+                  <div style="padding-top: 15px;"><img src="{{ card.image }}" alt="{{ card.username }}" height="80"width="80" style="border: 2px solid {{ card.color }}; border-radius:40px;"></div>
+                  <div style="padding-bottom: 10px;">{{ card.username }}</div>
+                </a>
+                {% endfor %}
+              </div>
+            </div>
+        </div>
+      </div>
+    </fieldset>
+    </form>
+</div>
+</div>
+</body>
+{% endblock %}

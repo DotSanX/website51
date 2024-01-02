@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %} ЗАЛ СЛАВЫ! {% endblock %}
+{% block body %}
+<body class="contacts">
+<div class="container contacts-nav col-12" style=" border-bottom: 1px solid #ffff2b;
+   box-shadow: 1px 1px 2px #ffff2b, 0 0 1em #ffff2b, 0 0 0.2em #ffff2b;}">
+    <nav style="margin-top: 10px;">
+        <a href="/" class="contacts-navbuttom ">Главная</a>
+        <a href="/blog" class="contacts-navbuttom ">Интересное</a>
+        <a href="/contacts" class="contacts-navbuttom">О себе</a>
+        <a class="contacts-navbuttom dropdown-toggle" style="border-radius:20px;" data-bs-toggle="dropdown" aria-expanded="false"></a>
+        <ul class="dropdown-menu" style="background-color: #262626; text-align:center;">
+          <li><a class="contacts-navbuttom" href="/contacts/add" style="padding-left: 35px; padding-right: 35px;">Создать карточку</a></li>  
+          <li style="padding-top: 13px;"><a class="contacts-navbuttom" href="/contacts/edit">Редактировать карточку</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="container rounded-5" style="background-color: #262626; color: white;">
+  <div style="padding-top: 60px;">
+    <h1 style="font-family: Courier, monospace;">Вот они - </h1>
+    <h1 style="color: #fffc2a; font-family: Impact ;text-shadow: 1px 1px 2px #ffff5e, 0 0 1em #ffff82, 0 0 0.2em #ffff82;">ГЕРОИ ПРОГРАММИРОВАНИЯ</h1>
+  </div>
+  <div class="contacts-maintext">
+    <p>Перед вами высоко&shyинтел&shyлектуальные умы челове&shyчества, объедин&shyив&shyшиеся под флагом GeekBrains! <br>
+    Каждый из них представляет собой индивидуальную и развивающуюся личность, для которой нет ничего не возможного в IT сфере!</p>
+  </div>
+  <div class="contacts-gold ">
+    <h1 style="mirgin-top: 15px;">ЗАЛ СЛАВЫ!</h1>
+  </div>
+    <div class="row">
+      {% for contact in contacts %}
+      <div class="contacts-card col-lg-3 col-md-4 col-sm-6 col-12">
+        <div class="container rounded-5" style="background-color: #171717; border: 3px solid {{ contact.color }}; padding: 5px 5px;">
+          <img class="rounded-5 contacts-img" src="{{ contact.image }}" alt="que pro">
+          <div>
+            <h1 class="contacts-name"><b>{{ contact.name }}</b></h1>
+          </div>
+          <div>
+            <p class="contacts-text">
+              {{ contact.description }}
+            </p>
+          </div>
+          <div class="contacts-links">
+            {%if contact.url_youtube != None %}
+              <a href="{{ contact.url_youtube }}"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" height="50" width="50" alt="youtube"></a>
+            {% endif %}
+            {%if contact.url_telegram != None %}
+            <a href="{{ contact.url_telegram }}"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" height="50" width="50" alt="telegram"></a>
+            {% endif %}
+            {%if contact.url_vk != None %}
+            <a href="{{ contact.url_vk }}"><img src="https://pngicon.ru/file/uploads/vk.png" height="50" width="50" alt="vk"></a>
+            {% endif %}
+            {%if contact.url_instagram != None %}
+            <a href="{{ contact.url_instagram }}"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" height="50" width="50" alt="instagram"></a>
+            {% endif %}
+            {%if contact.url_discord != None %}
+            <a href="{{ contact.url_discord }}"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" height="50" width="50" alt="discord"></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+</div>
+<div class="col-12 container contacts-futor" >
+        <div>
+            <p style="padding-top: 15px;"><b>Все права анниглированны &copy </b></p>
+        </div>
+        <div class="end_links">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" height="100" width="100" alt="youtube"></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" height="100" width="100" alt="telegram"></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://pngicon.ru/file/uploads/vk.png" height="100" width="100" alt="vk"></a>
+        </div>
+    </div>
+</body>
+{% endblock %}
+
